@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI-Driven Collaborative Study Groups
 
-## Getting Started
+## Overview
+AI-Driven Collaborative Study Groups is a platform that intelligently matches students based on their learning goals, strengths, and complementary skills. Using AI-powered clustering techniques, the system groups users into optimal study groups to enhance peer-to-peer learning experiences.
 
-First, run the development server:
+## Features
+- **AI Matching Algorithm**: Uses K-Means clustering to group students based on their learning preferences, strengths, and weaknesses.
+- **Real-Time Collaboration**: Integrated chat system for instant messaging within study groups.
+- **User Profiles**: Students can enter their subjects of interest and areas of expertise.
+- **Seamless Communication**: Next.js for frontend, Flask for ML backend, and WebSockets for real-time messaging.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+### Frontend:
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **Tailwind CSS**: For modern UI design and responsiveness.
+
+### Backend:
+- **Flask**: Lightweight Python web framework for handling ML logic.
+- **Scikit-Learn**: Implements K-Means clustering for group formation.
+- **MongoDB**: Stores user profiles and study group data.
+
+### Real-Time Features:
+- **WebSockets**: Enables real-time messaging and collaboration.
+- **Socket.io**: Handles real-time connections efficiently.
+
+## Installation
+### Prerequisites:
+- Node.js (v16+)
+- Python (3.8+)
+- MongoDB
+
+### Setup
+#### 1. Clone the Repository
+```sh
+git clone https://github.com/yourusername/ai-study-groups.git
+cd ai-study-groups
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### 2. Setup Frontend
+```sh
+cd frontend
+npm install
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+#### 3. Setup Backend (Flask API)
+```sh
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
+1. Users sign up and provide details about their learning interests.
+2. The AI model groups users into study groups based on K-Means clustering.
+3. Users can chat and collaborate in real time.
 
-## Learn More
+## Contribution
+Contributions are welcome! Feel free to open issues and pull requests.
 
-To learn more about Next.js, take a look at the following resources:
+## License
+MIT License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
